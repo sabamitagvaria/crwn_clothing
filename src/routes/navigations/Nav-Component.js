@@ -17,16 +17,16 @@ const NavBar = () => {
     return (
         <Fragment>
             <nav className="navigation">
-                <Link className="logo-container" to='/crwn_clothing'>
+                <Link className="logo-container" to=''>
                     <CrownLogo className="logo" />
                 </Link>
                 <div className="nav-links-container">
-                    <Link className="nav-link" to='/crwn_clothing/shop'>SHOP</Link>
+                    <Link className="nav-link" to='shop'>SHOP</Link>
                     {
 
                         currentUser ? (
                             <span onClick={signOutHandler} className="nav-link">Sign Out</span>
-                        ) : <Link className="nav-link" to='/crwn_clothing/signIn'>Sign In</Link>
+                        ) : <Link className="nav-link" to='signIn'>Sign In</Link>
                     }
                     <CartIcon />
 
