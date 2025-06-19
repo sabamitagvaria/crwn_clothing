@@ -13,9 +13,9 @@ const App = () => {
       <Routes>
         <Route path="/crwn_clothing" element={<NavBar />}>
           <Route index element={<Home />} />
-          <Route path="/crwn_clothing/shop/*" element={<Shop />} />
-          <Route path="/crwn_clothing/signIn" element={<SignInPage />} />
-          <Route path="/crwn_clothing/checkout" element={<CheckoutPage />} />
+          <Route path="shop/*" element={<Shop />} />
+          <Route path="signIn" element={<SignInPage />} />
+          <Route path="checkout" element={<CheckoutPage />} />
         </Route>
       </Routes>
     </HashRouter>
