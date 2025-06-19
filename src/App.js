@@ -1,5 +1,5 @@
 import Home from "./routes/home/home-component";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./routes/navigations/Nav-Component";
 import SignInPage from "./components/sign-in-page/sign-in-component";
 import Shop from "./routes/shop/shop-page";
@@ -9,14 +9,16 @@ console.log(store.getState())
 const App = () => {
 
   return (
-    <Routes>
-      <Route path="/crwn_clothing" element={<NavBar />}>
-        <Route index element={<Home />} />
-        <Route path="shop/*" element={<Shop />} />
-        <Route path="signIn" element={<SignInPage />} />
-        <Route path="checkout" element={<CheckoutPage />} />
-      </Route>
-    </Routes>
+    <HashRouter>
+      <Routes>
+        <Route path="/crwn_clothing" element={<NavBar />}>
+          <Route index element={<Home />} />
+          <Route path="/crwn_clothing/shop/*" element={<Shop />} />
+          <Route path="/crwn_clothing/signIn" element={<SignInPage />} />
+          <Route path="/crwn_clothing/checkout" element={<CheckoutPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
 
   )
 }
