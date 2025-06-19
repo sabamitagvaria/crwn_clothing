@@ -9,16 +9,16 @@ console.log(store.getState())
 const App = () => {
 
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Home />} />
-          <Route path="shop/*" element={<Shop />} />
-          <Route path="signIn" element={<SignInPage />} />
-          <Route path="checkout" element={<CheckoutPage />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+
+    <Routes>
+      <Route path="/crwn_clothing" element={<NavBar />}>
+        <Route index element={<Home />} />
+        <Route path="shop/*" element={<Shop />} />
+        <Route path="signIn" element={<SignInPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+      </Route>
+    </Routes>
+
 
   )
 }
