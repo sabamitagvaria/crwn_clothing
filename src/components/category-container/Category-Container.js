@@ -4,9 +4,9 @@ export default function Category({ key, title, imgSrc }) {
     const navigate = useNavigate()
     const goToShop = () => {
         if (title !== 'Women' && title !== 'Men') {
-            navigate(`/shop/${title.toLowerCase()}`)
+            navigate(`/crwn_clothing/shop/${title.toLowerCase()}`)
         } else {
-            navigate(`/shop/${title.toLowerCase()}s`)
+            navigate(`crwn_clothing/shop/${title.toLowerCase()}s`)
         }
     }
     return (
